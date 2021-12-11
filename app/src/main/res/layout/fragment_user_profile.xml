@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/_8sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="Manage profile"
+                    android:textColor="@color/matishblack"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end">
+
+                    <TextView
+                        android:id="@+id/tvEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:drawableLeft="@drawable/ic_edit"
+                        android:drawablePadding="@dimen/_3sdp"
+                        android:text="Edit Profile"
+                        android:textColor="@color/matishblack"
+                        android:textSize="@dimen/_13sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+
+            android:background="#ECE9E9" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/ll_dp"
+
+        android:gravity="center"
+        android:layout_height="190dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="100dp"
+            android:id="@+id/ivProfilePic"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/placeholder"
+            android:layout_height="100dp"/>
+        <TextView
+            android:id="@+id/tvChangeProfilePic"
+            android:layout_width="wrap_content"
+            android:text="Change\n Profile"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+
+        android:background="#ECE9E9" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Details"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/tv"
+        android:layout_margin="15dp"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/border_shap"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/border_shap"
+                android:backgroundTint="#F4F2F2"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:srcCompat="@drawable/ic_baseline_person_outline_24"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Name :-"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:layout_marginLeft="5dp"
+                    android:text=""
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/border_shap"
+                android:backgroundTint="#F4F2F2"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:srcCompat="@drawable/ic_mobile"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Mobile No :-"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvMobileAndGender"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:layout_marginLeft="5dp"
+                    android:text=""
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/border_shap"
+                android:backgroundTint="#F4F2F2"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:srcCompat="@drawable/ic_baseline_email_24"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Email :-"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:layout_marginLeft="5dp"
+                    android:text=""
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/border_shap"
+                android:backgroundTint="#F4F2F2"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:srcCompat="@drawable/ic_baseline_person_outline_24"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Gender :-"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvGender"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:layout_marginLeft="5dp"
+                    android:text=""
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/border_shap"
+                android:backgroundTint="#F4F2F2"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:srcCompat="@drawable/ic_baseline_person_outline_24"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="About you :-"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/tvAbout"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:layout_marginLeft="5dp"
+                    android:text=""
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:id="@+id/logout"
+                android:text="  Logout"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="10dp"
+                android:drawableLeft="@drawable/ic_baseline_logout_24"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

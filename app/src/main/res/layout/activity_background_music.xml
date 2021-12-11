@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Post.BackgroundMusicActivity">
+    <LinearLayout
+        android:id="@+id/tvTop"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/llTop"
+            android:paddingTop="@dimen/_15sdp"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Background Music"
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textSize="@dimen/_13sdp"
+                android:drawablePadding="@dimen/_6sdp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/_7sdp"
+                android:id="@+id/backgroundMusic_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/tvNetworkError"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_error"
+            android:text="Network Issue \n Please try Again."
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/emptyMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OOp's \n List is Empty"
+            android:gravity="center"
+            android:drawableTop="@drawable/ic_notification_icon1"
+            />
+    </LinearLayout>
+</RelativeLayout>

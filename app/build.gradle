@@ -1,0 +1,78 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+    defaultConfig {
+
+        applicationId "com.app.hitechnews"
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            // config you want to support device
+            abiFilters 'arm64-v8a', 'armeabi', 'armeabi-v7a', 'x86'
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':videocompressor')
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'org.jetbrains:annotations:15.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.google.android.exoplayer:exoplayer:2.7.3'
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    implementation 'com.yahoo.mobile.client.android.util.rangeseekbar:rangeseekbar-library:0.1.0'
+    implementation 'com.arthenica:mobile-ffmpeg-full:4.4'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.github.douglasjunior:android-simple-tooltip:1.0.0-rc.0'
+    implementation 'com.airbnb.android:lottie:3.4.2'
+    implementation 'com.henryblue.mxvideoplayer:xvideoplayer:1.2.1'
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:4.9.0"
+    annotationProcessor "com.github.bumptech.glide:compiler:4.9.0"
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:retrofit-adapters:2.0.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    implementation 'com.nagihong:videocompressor:1.0.0'
+
+    implementation 'com.github.hackware1993:MagicIndicator:1.6.0' // for support lib
+    implementation 'com.github.hackware1993:MagicIndicator:1.7.0' // for androidx
+
+
+//implementation "androidx.multidex:multidex:2.0.1"
+// share videos
+//    implementation 'com.iceteck.silicompressorr:silicompressor:2.2.4'
+
+}

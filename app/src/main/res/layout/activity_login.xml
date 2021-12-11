@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Auth.LoginActivity">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_above="@+id/llbottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="250dp"
+            android:src="@drawable/logo"
+            android:layout_height="250dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llbottom"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="Login Here"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            />
+        <EditText
+            android:id="@+id/etMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_bg"
+            android:hint="Enter Your Mobile Number"
+            android:inputType="number"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:padding="@dimen/_12sdp"
+            android:textColor="@color/purple_500"
+            android:textColorHint="@color/purple_500" />
+        <EditText
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_bg"
+            android:hint="Enter Your Password"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/_12sdp"
+            android:textColor="@color/purple_500"
+            android:textColorHint="@color/purple_500" />
+
+        <LinearLayout
+            android:id="@+id/llSubmit"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:background="@color/purple_500"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="@dimen/_40sdp">
+            <TextView
+                android:id="@+id/tvSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:text="SUBMIT"
+                android:textColor="@color/white"
+                android:gravity="center"
+                />
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/skLoader"
+                android:visibility="gone"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                style="@style/SpinKitView.Wave"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:SpinKit_Color="@color/white" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvRegistration"
+            android:padding="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Create New Registration"
+            android:textColor="@color/matishblack"
+            android:textSize="@dimen/_15sdp"
+            />
+    </LinearLayout>
+</RelativeLayout>

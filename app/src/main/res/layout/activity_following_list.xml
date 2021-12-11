@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Follow.FollowingListActivity">
+    <LinearLayout
+        android:id="@+id/tvTop"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/llTop"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:padding="@dimen/_8sdp"
+                    android:id="@+id/tvBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_round_back"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Following List"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/following_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/tvNetworkError"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_error"
+            android:text="Network Issue \n Please try Again."
+            android:gravity="center"/>
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/emptyMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OOp's \n List is Empty"
+            android:gravity="center"
+            android:drawableTop="@drawable/ic_search1"
+            />
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/loader"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.github.ybq.android.spinkit.SpinKitView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                style="@style/SpinKitView.Wave"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                app:SpinKit_Color="@color/colorPrimary" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Loading"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

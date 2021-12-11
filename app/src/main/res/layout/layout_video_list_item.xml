@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="100"
+    android:background="#fff">
+
+
+<!--<TextView-->
+<!--    android:id="@+id/title"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginStart="10dp"-->
+<!--    android:layout_marginEnd="10dp"-->
+<!--    android:layout_marginBottom="15dp"-->
+<!--    android:padding="10dp"-->
+<!--    android:textColor="#000"-->
+<!--    android:textSize="20sp"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintStart_toStartOf="parent"-->
+<!--    app:layout_constraintTop_toTopOf="parent"-->
+<!--    app:layout_constraintBottom_toTopOf="@id/media_container"-->
+<!--    android:text="This is the title"-->
+<!--    android:visibility="gone"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+
+        <!--            <FrameLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="@dimen/_100sdp"-->
+        <!--                android:layout_marginBottom="10dp"-->
+        <!--                app:layout_constraintEnd_toEndOf="parent"-->
+        <!--                app:layout_constraintStart_toStartOf="parent"-->
+        <!--                app:layout_constraintTop_toBottomOf="@id/title"-->
+        <!--                android:background="#000"-->
+        <!--                android:scaleType="center"-->
+        <!--                android:id="@+id/media_container">-->
+
+        <!--                <ImageView-->
+        <!--                    android:id="@+id/thumbnail"-->
+        <!--                    android:layout_width="match_parent"-->
+        <!--                    android:layout_height="@dimen/_100sdp"-->
+        <!--                    android:background="#fff"-->
+        <!--                    android:scaleType="centerInside"-->
+        <!--                    android:src="@drawable/white_background" />-->
+
+        <!--                <ImageView-->
+        <!--                    android:layout_width="25dp"-->
+        <!--                    android:layout_height="25dp"-->
+        <!--                    android:scaleType="centerCrop"-->
+        <!--                    android:src="@drawable/ic_valume_up_grey"-->
+        <!--                    android:layout_gravity="end|bottom"-->
+        <!--                    android:id="@+id/volume_control"-->
+        <!--                    android:alpha="0"-->
+        <!--                    android:animateLayoutChanges="true"-->
+        <!--                    android:layout_marginEnd="15dp"-->
+        <!--                    android:layout_marginBottom="15dp"/>-->
+
+        <!--                <ProgressBar-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:id="@+id/progressBar"-->
+        <!--                    style="?android:attr/progressBarStyle"-->
+        <!--                    android:visibility="gone"-->
+        <!--                    android:layout_gravity="center" />-->
+        <!--            </FrameLayout>-->
+
+        <RelativeLayout
+            android:id="@+id/ll_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/placeholder" />
+
+            <LinearLayout
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toLeftOf="@+id/more"
+                android:layout_toRightOf="@+id/iv_dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvPostedBy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="sdadas"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/ok" />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/ic_circle"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvFollow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:singleLine="true"
+                        android:text="Follow"
+                        android:textColor="#E91E63"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/more"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_three_dot" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:id="@+id/parent">
+            <hb.xvideoplayer.MxVideoPlayerWidget
+                android:visibility="gone"
+                android:id="@+id/list_video_player"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="#000"
+                android:scaleType="center"
+                android:id="@+id/media_container">
+
+                <ImageView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/white_background" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_valume_up_grey"
+                    android:layout_gravity="end|bottom"
+                    android:id="@+id/volume_control"
+                    android:alpha="0"
+                    android:animateLayoutChanges="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"/>
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyle"
+                    android:visibility="gone"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+            <VideoView
+                android:visibility="gone"
+                android:id="@+id/vid"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true" />
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_pause_circle_filled_black_24dp"/>
+
+            <ProgressBar
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progress_bar"
+                android:indeterminateDrawable="@drawable/circle"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/OuterLayout"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.exoplayer2.ui.PlayerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/player_view"
+                    app:resize_mode="fill"
+                    app:auto_show="false"
+                    app:hide_on_touch="true"
+                    app:show_timeout="5000"
+                    app:rewind_increment="10000"
+                    app:fastforward_increment="10000"
+                    app:use_controller="true"
+                    app:player_layout_id="@layout/exo_simple_player_view"
+                    app:controller_layout_id="@layout/custom_coltroller"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/like_share"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_weight="1">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:src="@drawable/vid_cam"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:id="@+id/iv_vid"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:src="@drawable/transfer"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:id="@+id/iv_repost"
+        android:visibility="gone"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_width="25dp"
+        android:src="@drawable/heart"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/ivLike"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="25dp"/>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:src="@drawable/redheart"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/dis_like"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="25dp"/>
+
+    <TextView
+        android:id="@+id/tvLike"
+        android:layout_width="wrap_content"
+        android:text="1.6k"
+        android:textSize="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/ivComment"
+        android:layout_width="wrap_content"
+        android:src="@drawable/comment"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvComment"
+        android:layout_width="wrap_content"
+        android:text="15k"
+        android:textSize="15dp"
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"/>
+
+
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:text=""
+                android:textSize="15dp"
+                android:layout_margin="8dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvTime"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:text=""
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_vertical"
+                android:singleLine="true"
+                android:textSize="@dimen/_9sdp"
+                android:textColor="#6E6D6D"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+
+            <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+                android:gravity="center"
+    android:layout_weight="1">
+
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:id="@+id/share"
+                    android:src="@drawable/share"
+                    android:layout_margin="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="24dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#C8C7C7"/>
+    </LinearLayout>
+
+
+
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--xmlns:tools="http://schemas.android.com/tools"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--xmlns:app="http://schemas.android.com/apk/res-auto">-->
+
+<!--<androidx.core.widget.NestedScrollView-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:id="@+id/parent">-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/title"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_marginBottom="15dp"-->
+<!--            android:padding="10dp"-->
+<!--            android:textColor="#000"-->
+<!--            android:textSize="20sp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintBottom_toTopOf="@id/media_container"-->
+<!--            android:text="This is the title"/>-->
+
+
+<!--        <FrameLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/_100sdp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/title"-->
+<!--            android:background="#000"-->
+<!--            android:scaleType="center"-->
+<!--            android:id="@+id/media_container">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/thumbnail"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="@dimen/_100sdp"-->
+<!--                android:background="#fff"-->
+<!--                android:scaleType="centerInside"-->
+<!--                android:src="@drawable/white_background" />-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="25dp"-->
+<!--                android:layout_height="25dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@drawable/ic_valume_up_grey"-->
+<!--                android:layout_gravity="end|bottom"-->
+<!--                android:id="@+id/volume_control"-->
+<!--                android:alpha="0"-->
+<!--                android:animateLayoutChanges="true"-->
+<!--                android:layout_marginEnd="15dp"-->
+<!--                android:layout_marginBottom="15dp"/>-->
+
+<!--            <ProgressBar-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/progressBar"-->
+<!--                style="?android:attr/progressBarStyle"-->
+<!--                android:visibility="gone"-->
+<!--                android:layout_gravity="center" />-->
+<!--        </FrameLayout>-->
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/ll_header"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="10dp">-->
+
+<!--            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                android:id="@+id/iv_dp"-->
+<!--                android:layout_width="60dp"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:src="@drawable/placeholder" />-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/tv"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:layout_toLeftOf="@+id/more"-->
+<!--                android:layout_toRightOf="@+id/iv_dp"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tvPostedBy"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:singleLine="true"-->
+<!--                        android:text="sdadas"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="15dp" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="20dp"-->
+<!--                        android:layout_height="20dp"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:layout_margin="5dp"-->
+<!--                        android:src="@drawable/ok" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="10dp"-->
+<!--                        android:layout_height="10dp"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:layout_margin="5dp"-->
+<!--                        android:src="@drawable/ic_circle" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tvFollow"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:layout_marginLeft="5dp"-->
+<!--                        android:singleLine="true"-->
+<!--                        android:text="Follow"-->
+<!--                        android:textColor="#E91E63"-->
+<!--                        android:textStyle="bold" />-->
+
+<!--                </LinearLayout>-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tvLocation"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:text="" />-->
+<!--            </LinearLayout>-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/more"-->
+<!--                android:layout_width="wrap_content"-->
+
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:src="@drawable/ic_three_dot" />-->
+<!--        </RelativeLayout>-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="fill_parent"-->
+<!--            android:layout_height="250dp">-->
+<!--            <hb.xvideoplayer.MxVideoPlayerWidget-->
+<!--                android:visibility="gone"-->
+<!--                android:id="@+id/list_video_player"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="200dp" />-->
+<!--            <VideoView-->
+<!--                android:id="@+id/vid"-->
+<!--                android:layout_width="fill_parent"-->
+<!--                android:layout_height="fill_parent"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_alignParentLeft="true"-->
+<!--                android:layout_alignParentRight="true"/>-->
+<!--            <ImageView-->
+<!--                android:id="@+id/pause"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:src="@drawable/ic_pause_circle_filled_black_24dp"/>-->
+
+<!--            <ProgressBar-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/progress_bar"-->
+<!--                android:indeterminateDrawable="@drawable/circle"-->
+<!--                android:layout_centerInParent="true"/>-->
+<!--        </RelativeLayout>-->
+
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/OuterLayout"-->
+<!--            android:orientation="vertical"-->
+<!--            android:visibility="gone"-->
+
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="250dp">-->
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <com.google.android.exoplayer2.ui.PlayerView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:id="@+id/player_view"-->
+<!--                    app:resize_mode="fill"-->
+<!--                    app:auto_show="false"-->
+<!--                    app:hide_on_touch="true"-->
+<!--                    app:show_timeout="5000"-->
+<!--                    app:rewind_increment="10000"-->
+<!--                    app:fastforward_increment="10000"-->
+<!--                    app:use_controller="true"-->
+
+<!--                    app:player_layout_id="@layout/exo_simple_player_view"-->
+<!--                    app:controller_layout_id="@layout/custom_coltroller"/>-->
+
+<!--            </RelativeLayout>-->
+
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:src="@drawable/vid_cam"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/iv_vid"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:src="@drawable/transfer"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/iv_repost"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <ImageView-->
+<!--                android:layout_width="25dp"-->
+<!--                android:src="@drawable/heart"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:id="@+id/ivLike"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:layout_height="25dp"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvLike"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:text="1.6k"-->
+<!--                android:textSize="15dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <ImageView-->
+<!--                android:id="@+id/ivComment"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:src="@drawable/comment"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/tvComment"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:text="15k"-->
+<!--                android:textSize="15dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_height="wrap_content"/>-->
+<!--            <ImageView-->
+<!--                android:layout_width="24dp"-->
+<!--                android:id="@+id/share"-->
+<!--                android:src="@drawable/share"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="24dp"/>-->
+<!--        </LinearLayout>-->
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:background="#ACABAB"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvDescription"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:text=""-->
+<!--            android:textSize="15dp"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvTime"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:text=""-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:singleLine="true"-->
+<!--            android:textSize="@dimen/_9sdp"-->
+<!--            android:textColor="#6E6D6D"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--    </LinearLayout>-->
+<!--</androidx.core.widget.NestedScrollView>-->
+
+
+<!--</FrameLayout>-->

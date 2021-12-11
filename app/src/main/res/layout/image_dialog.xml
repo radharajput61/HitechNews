@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#95000000"
+    >
+
+
+    <LinearLayout
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:background="@color/white"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_170sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="Please Select Your Image"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/ivCamera"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:srcCompat="@drawable/ic_camera"
+                    app:tint="@color/colorPrimary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/ivGallery"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    app:srcCompat="@drawable/ic_picture"
+                    app:tint="@color/colorPrimary"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@color/colorPrimary"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

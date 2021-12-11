@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/drawable-v24/border_shap.xml" value="0.2203125" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/drawable-v24/ic_email.xml" value="0.2203125" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/drawable-v24/ic_mobile.xml" value="0.2203125" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/drawable-v24/round_indicator_bg.xml" value="0.2203125" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/drawable/bg22221.xml" value="0.2203125" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/drawable/heart.xml" value="0.2203125" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/drawable/ic_baseline_person_outline_24.xml" value="0.2203125" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/drawable/ic_email.xml" value="0.2203125" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/drawable/ic_error.xml" value="0.2203125" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/drawable/ic_notification_icon1.xml" value="0.2203125" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/drawable/tab_background.xml" value="0.2203125" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/activity_dashboard.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/activity_dynamic.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/activity_follower_list.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/activity_post_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/activity_prepair_video_for_upload.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/activity_registration.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/activity_select_location.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/activity_udashbord.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/activity_user_type_select.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/audio_input_settings_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/custom_tab.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/fragment_dynamic.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/fragment_dynamic_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/fragment_my_post.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/fragment_notification.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/fragment_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/fragment_search.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/fragment_test.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/fragment_user_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/fragment_user_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/image_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/layout_ur_video_list_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/layout_video_list_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/logout.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/post_item.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/layout/simple_fragment_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/menu/tabs.xml" value="0.20416666666666666" />
+        <entry key="..\:/Radha Project/lockdown/Hitech News/app/src/main/res/menu/usertabs.xml" value="0.20416666666666666" />
+        <entry key="..\:/Suraj Project/Hitech News/app/src/main/res/drawable/ic_right_quote_icon.xml" value="0.20277777777777778" />
+        <entry key="..\:/Suraj Project/Hitech News/app/src/main/res/layout/activity_login.xml" value="0.1921875" />
+        <entry key="..\:/Suraj Project/Hitech News/app/src/main/res/layout/activity_registration.xml" value="0.1921875" />
+        <entry key="..\:/Suraj Project/Hitech News/app/src/main/res/layout/activity_splash.xml" value="0.1921875" />
+        <entry key="..\:/Suraj Project/Hitech News/app/src/main/res/layout/fragment_bookmark.xml" value="0.1921875" />
+        <entry key="..\:/Suraj Project/Hitech News/app/src/main/res/layout/fragment_home.xml" value="0.1921875" />
+        <entry key="..\:/Suraj Project/Hitech News/app/src/main/res/layout/layout_video_list_item.xml" value="0.1921875" />
+        <entry key="..\:/Suraj Project/Hitech News/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.20833333333333334" />
+        <entry key="..\:/Suraj Project/Hitech News/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1328125" />
+        <entry key="..\:/shailendra projects/TheLive18App/app/src/main/res/layout/_bg_music_list_item.xml" value="0.18" />
+        <entry key="..\:/shailendra projects/TheLive18App/app/src/main/res/layout/activity_post_details.xml" value="0.14074074074074075" />
+        <entry key="..\:/shailendra projects/TheLive18App/app/src/main/res/layout/activity_prepair_video_for_upload.xml" value="0.1921875" />
+        <entry key="..\:/shailendra projects/TheLive18App/app/src/main/res/layout/fragment_home.xml" value="0.1921875" />
+        <entry key="..\:/shailendra projects/TheLive18App/app/src/main/res/layout/layout_video_list_item.xml" value="0.1921875" />
+        <entry key="..\:/shailendra projects/TheLive18App/app/src/main/res/layout/post_list_item.xml" value="0.1921875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
