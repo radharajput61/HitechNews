@@ -3,12 +3,15 @@ package com.app.hitechnews.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
 import com.app.hitechnews.Activity.Auth.LoginActivity;
 import com.app.hitechnews.R;
+
+import java.io.File;
 
 public class UserTypeSelect extends AppCompatActivity {
 LinearLayout lluser,llreporter;
@@ -18,6 +21,8 @@ LinearLayout lluser,llreporter;
         setContentView(R.layout.activity_user_type_select);
         lluser=findViewById(R.id.lluser);
         llreporter=findViewById(R.id.llreporter);
+
+
 
         lluser.setOnClickListener(new View.OnClickListener() {
             @Override

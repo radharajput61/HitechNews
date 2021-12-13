@@ -1,7 +1,15 @@
 package com.app.hitechnews.videoplayer;
 
+import static android.provider.MediaStore.Video.Thumbnails.MINI_KIND;
+
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.media.MediaMetadataRetriever;
+import android.media.ThumbnailUtils;
+import android.net.Uri;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -33,6 +41,9 @@ import com.google.android.exoplayer2.C;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.OutputStream;
+import java.util.HashMap;
 
 public class VideoPlayerViewHolder extends RecyclerView.ViewHolder {
 
@@ -95,11 +106,13 @@ public class VideoPlayerViewHolder extends RecyclerView.ViewHolder {
         {
             tvFollow.setVisibility(View.GONE);
         }else{
+
             if(mediaObject.getIsFollowed().equalsIgnoreCase("1"))
             {
                 tvFollow.setText("Followed");
                 tvFollow.setTextColor(this.itemView.getResources().getColor(R.color.green));
             }
+
             else{
                 tvFollow.setText("Follow");
             }
@@ -134,24 +147,52 @@ public class VideoPlayerViewHolder extends RecyclerView.ViewHolder {
 //                setFollowData(mediaObject.getFollowerId(),myPreferences.getUserId());
 //            }
 //        });
+            Bitmap      bitmap = null;
+            try {
+            bitmap = retriveVideoFrameFromVideo(mediaObject.getVideoLink());
+                if (bitmap != null) {
 
-        Log.e("url",mediaObject.getVideoLink());
+                }
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+            }
+        Log.e("url", bitmap+"");
+
+
         share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.putExtra(Intent.EXTRA_SUBJECT,"Demo Video");
-                //intent.setAction(Intent.ACTION_SEND);
-                intent.setType("video/mp4");
-                intent.putExtra(Intent.EXTRA_STREAM,"http://techslides.com/demos/sample-videos/small.mp4");
-                // intent.putExtra(Intent.EXTRA_TEXT, "Watch this video to get a good complement from your friends.");
+                Bitmap      bitmap = null;
                 try {
-                    context.startActivity(Intent.createChooser(intent,"Upload video via:"));
+                    bitmap = retriveVideoFrameFromVideo(mediaObject.getVideoLink());
+                    if (bitmap != null) {
 
-                } catch (android.content.ActivityNotFoundException ex) {
-                       Log.e("errorrrrr",ex.toString());
+                    }
+                } catch (Throwable throwable) {
+                    throwable.printStackTrace();
                 }
+                Intent share = new Intent(Intent.ACTION_SEND);
+                share.setType("image/jpeg");
+
+                ContentValues values = new ContentValues();
+                values.put(MediaStore.Images.Media.TITLE, "title");
+                values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg");
+                Uri uri =context. getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+                        values);
+
+
+                OutputStream outstream;
+                try {
+                    outstream = context.getContentResolver().openOutputStream(uri);
+                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, outstream);
+                    outstream.close();
+                } catch (Exception e) {
+                    System.err.println(e.toString());
+                }
+
+                share.putExtra(Intent.EXTRA_STREAM, uri);
+                share.putExtra(Intent.EXTRA_TEXT, mediaObject.getVideoLink() +"Watch this video to get a good complement from your friends.");
+                context.startActivity(Intent.createChooser(share, "Share Video"));
 
 //        Intent intent = new Intent(Intent.ACTION_SEND);
 //        intent.putExtra(Intent.EXTRA_SUBJECT,"Demo Video");
@@ -168,6 +209,7 @@ public class VideoPlayerViewHolder extends RecyclerView.ViewHolder {
 
             }
         });
+
         Log.e("getMyLike",mediaObject.getMyLike());
 if (mediaObject.getMyLike().equals("0"))
 {
@@ -233,7 +275,25 @@ if (mediaObject.getMyLike().equals("0"))
 //                .error(R.drawable.placeholder)
 //                .into(iv_dp);
     }
+    public static Bitmap retriveVideoFrameFromVideo(String videoPath) throws Throwable {
+        Bitmap bitmap = null;
+        MediaMetadataRetriever mediaMetadataRetriever = null;
+        try {
+            mediaMetadataRetriever = new MediaMetadataRetriever();
+            mediaMetadataRetriever.setDataSource(videoPath, new HashMap<String, String>());
+            //   mediaMetadataRetriever.setDataSource(videoPath);
+            bitmap = mediaMetadataRetriever.getFrameAtTime();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new Throwable("Exception in retriveVideoFrameFromVideo(String videoPath)" + e.getMessage());
 
+        } finally {
+            if (mediaMetadataRetriever != null) {
+                mediaMetadataRetriever.release();
+            }
+        }
+        return bitmap;
+    }
     private void setLikeData(final String LikeStatus, final String PostId,final String UserId,TextView tvLike)
     {
         final JSONObject obj = new JSONObject();
